@@ -1,0 +1,47 @@
+# Dependency directories
+node_modules/
+
+# Expo / React Native
+.expo/
+dist/
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.DS_Store
+.npm/
+
+# Typescript
+*.tsbuildinfo
+
+# Build / Output outputs
+apps/api/dist/
+packages/shared/dist/
+
+# Env & Turborepo
+.turbo/
+.vercel/
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
