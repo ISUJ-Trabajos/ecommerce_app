@@ -3,6 +3,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useState, useRef } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useProductDetail } from '../../hooks/useCatalog';
+import { useCartStore } from '../../store/cart.store';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const IMAGE_HEIGHT = SCREEN_WIDTH * 0.9;
@@ -13,6 +14,10 @@ export default function ProductDetail() {
   const { data, isLoading } = useProductDetail(slug);
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const [addError, setAddError] = useState<string | null>(null);
+  const addItem = useCartStore(state => state.addItem);
+  const isAdding = useCartStore(state => state.isLoading);
 
   if (isLoading) {
     return (
@@ -47,9 +52,24 @@ export default function ProductDetail() {
     ? activeVariant.price_override 
     : product.final_price;
 
+  const handleAddToCart = async () => {
+    setAddError(null);
+    if (product.variants?.length > 0 && !selectedVariant) {
+      setAddError('Por favor selecciona una variante');
+      return;
+    }
+    
+    try {
+      await addItem(product.id, selectedVariant, 1);
+      // Feedback visual se podría agregar aquí (como un pequeño toast animado)
+    } catch (error: any) {
+      setAddError(error.message);
+    }
+  };
+
   return (
     <View className="flex-1 bg-background">
-      <ScrollView contentContainerStyle={{ paddingBottom: 120 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 140 }}>
         {/* ── Image Carousel ─────────────────── */}
         <View className="relative">
           <FlatList
@@ -155,7 +175,10 @@ export default function ProductDetail() {
                     <TouchableOpacity
                       key={variant.id}
                       disabled={!isAvailable}
-                      onPress={() => setSelectedVariant(isSelected ? null : variant.id)}
+                      onPress={() => {
+                        setSelectedVariant(isSelected ? null : variant.id);
+                        setAddError(null);
+                      }}
                       className={`px-4 py-3 rounded-xl border ${
                         isSelected
                           ? 'bg-primary/20 border-primary'
@@ -226,20 +249,32 @@ export default function ProductDetail() {
       </ScrollView>
 
       {/* ── Sticky Bottom CTA ────────────────── */}
-      <View className="absolute bottom-0 left-0 right-0 bg-surface-low/95 px-6 py-4 pb-8 border-t border-surface-high">
+      <View className="absolute bottom-0 left-0 right-0 bg-surface-low/95 px-6 pt-4 pb-8 border-t border-surface-high">
+        {addError && (
+          <Text className="text-red-400 text-sm text-center mb-2" style={{ fontFamily: 'Manrope_600SemiBold' }}>
+            {addError}
+          </Text>
+        )}
         <TouchableOpacity
-          disabled={outOfStock}
+          disabled={outOfStock || isAdding}
+          onPress={handleAddToCart}
           className={`w-full h-14 rounded-2xl items-center justify-center flex-row gap-2 ${
-            outOfStock ? 'bg-surface-high' : 'bg-primary'
+            outOfStock || isAdding ? 'bg-surface-high' : 'bg-primary'
           }`}
         >
-          <Ionicons name="cart-outline" size={22} color={outOfStock ? '#7d8489' : '#071327'} />
-          <Text
-            style={{ fontFamily: 'Manrope_700Bold' }}
-            className={`text-lg ${outOfStock ? 'text-text-secondary' : 'text-background'}`}
-          >
-            {outOfStock ? 'Sin Stock' : 'Añadir al Carrito'}
-          </Text>
+          {isAdding ? (
+            <ActivityIndicator color="#071327" />
+          ) : (
+            <>
+              <Ionicons name="cart-outline" size={22} color={outOfStock ? '#7d8489' : '#071327'} />
+              <Text
+                style={{ fontFamily: 'Manrope_700Bold' }}
+                className={`text-lg ${outOfStock ? 'text-text-secondary' : 'text-background'}`}
+              >
+                {outOfStock ? 'Sin Stock' : 'Añadir al Carrito'}
+              </Text>
+            </>
+          )}
         </TouchableOpacity>
       </View>
     </View>

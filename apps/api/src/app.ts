@@ -26,6 +26,9 @@ export const buildApp = async (): Promise<FastifyInstance> => {
 
     const { catalogRoutes } = await import('./modules/catalog/catalog.routes');
     api.register(catalogRoutes);
+
+    const { cartRoutes } = await import('./modules/cart/cart.routes');
+    api.register(cartRoutes);
   });
 
   app.get('/health', async () => {

@@ -28,9 +28,9 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] Hooks Tanstack Query para el flujo de datos.
 
 ### 4. P03 Carrito — Persistencia, cantidades, resumen
-- [ ] Endpoints de Carrito (`/cart`, items POST/PATCH/DELETE).
-- [ ] Store Zustand global del carrito sincronizado con BD.
-- [ ] UI: Pantalla Carrito con modales y alertas de precios o stock.
+- [x] Endpoints de Carrito (`/cart`, items POST/PATCH/DELETE).
+- [x] Store Zustand global del carrito sincronizado con BD.
+- [x] UI: Pantalla Carrito con modales y alertas de precios o stock.
 
 ### 5. P05 Checkout — 4 pasos + pedido en BD
 - [ ] Endpoints `GET /shipping/zones` y `POST /shipping/calculate`.
