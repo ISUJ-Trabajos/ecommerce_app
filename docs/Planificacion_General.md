@@ -39,9 +39,9 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] UI: Pantalla de Pago Exitoso.
 
 ### 6. P05+ Pedidos — Historial + timeline
-- [ ] Endpoints de consulta de Pedidos (`/orders`, `/orders/:id`).
-- [ ] UI: Tab de Historial de Pedidos Filtrado.
-- [ ] UI: Detalle del pedido con timeline.
+- [x] Endpoints de consulta de Pedidos (`/orders`, `/orders/:id`).
+- [x] UI: Tab de Historial de Pedidos Filtrado.
+- [x] UI: Detalle del pedido con timeline.
 
 ### 7. P04 Wishlist — Guardar/quitar productos
 - [ ] Endpoints CRUD Wishlist (`/wishlist/items`).

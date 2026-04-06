@@ -35,6 +35,9 @@ export const buildApp = async (): Promise<FastifyInstance> => {
 
     const { checkoutRoutes } = await import('./modules/checkout/checkout.routes');
     api.register(checkoutRoutes);
+
+    const { ordersRoutes } = await import('./modules/orders/orders.routes');
+    api.register(ordersRoutes);
   });
 
   app.get('/health', async () => {
