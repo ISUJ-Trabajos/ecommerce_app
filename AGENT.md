@@ -23,14 +23,18 @@ Antes de escribir código, lee estos archivos en `docs/`:
 | `PROTO_SQL.sql` | Script MySQL para XAMPP, incluye datos semilla y usuarios de prueba |
 | `Kumar_Store.png` | Imagen de referencia visual del logo de la empresa |
 
-En este proyecto dentro de la carpeta docs/ crea el documento Planificacion_General.md con el que se contendrá y modificará la planificación del proyecto para saber el progreso y pasos a seguir dentro del desarrollo del prototipo.
+Analiza la estructura del proyecto y la documentación actual del prototipo. En este proyecto dentro de la carpeta docs/ analiza y modifica el archivo Planificacion_General.md que contiene la planificación del proyecto para saber el progreso y pasos a seguir dentro del desarrollo del prototipo, actualizarlo según el proceso de desarrollo que se posee.
 
 ---
 
 ## Referencia Visual — Pantallas
 
 Las pantallas de referencia visual fueron generadas con los colores y estructura
-de KUMAR Store. Para la referencia y uso dentro de la app, abre y analiza el proyecto con el servidor MCP de Stitch AI para buscar el proyecto con nombre "KUMAR Store E-commerce".
+de KUMAR Store. Para la referencia y desarrollo de cualquier componente, pantalla o funcionalidad, consulta la carpeta docs/stitch_kumar_store_e_commerce/.
+
+Dentro de esta carpeta encontrarás todo el código fuente de las pantallas, componentes y funcionalidades de la aplicación. Para comprender el fundamento del proyecto consulta el archivo /docs/stitch_kumar_store_e_commerce/cielo_saphire/DESING.md.
+
+Para tener referencias más directas consultar la carpeta /docs/stitch_kumar_store_e_commerce para ver que carpeta contiene el codigo de referencia para la pantalla o funcionalidad a desarrollar.
 
 ---
 

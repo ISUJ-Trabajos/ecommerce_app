@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#1f2a3f",
+                        "tertiary": "#c5cbd1",
+                        "surface-bright": "#2e394f",
+                        "surface-variant": "#2a354a",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#41484c",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bfc8cd",
+                        "on-secondary-container": "#a7b3e4",
+                        "secondary-container": "#38456f",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary-fixed": "#161c20",
+                        "surface-tint": "#8cd0ec",
+                        "background": "#071327",
+                        "on-secondary-fixed": "#0a1941",
+                        "inverse-surface": "#d7e2ff",
+                        "outline": "#899297",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#d7e2ff",
+                        "on-primary-fixed-variant": "#004d62",
+                        "surface": "#071327",
+                        "tertiary-fixed-dim": "#c1c7cd",
+                        "inverse-primary": "#15667f",
+                        "on-secondary-fixed-variant": "#38456f",
+                        "primary-container": "#74b8d3",
+                        "on-primary": "#003544",
+                        "tertiary-container": "#a9b0b5",
+                        "on-error": "#690005",
+                        "primary": "#90d4ef",
+                        "on-tertiary": "#2a3136",
+                        "on-tertiary-container": "#3c4348",
+                        "on-primary-fixed": "#001f29",
+                        "on-secondary": "#212e57",
+                        "surface-container-highest": "#2a354a",
+                        "surface-dim": "#071327",
+                        "secondary-fixed-dim": "#b8c5f6",
+                        "surface-container-lowest": "#030e22",
+                        "primary-fixed": "#b9eaff",
+                        "outline-variant": "#3f484c",
+                        "tertiary-fixed": "#dde3e9",
+                        "on-primary-container": "#00485c",
+                        "surface-container-low": "#101b30",
+                        "secondary": "#b8c5f6",
+                        "primary-fixed-dim": "#8cd0ec",
+                        "on-background": "#d7e2ff",
+                        "inverse-on-surface": "#253046",
+                        "surface-container": "#142034"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #071327;
+            font-family: 'Manrope', sans-serif;
+            color: #ededea;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-nav {
+            background: rgba(7, 19, 39, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md flex justify-between items-center px-6 h-16 shadow-xl shadow-black/20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 scale-95 transition-transform cursor-pointer">menu</span>
+<h1 class="text-xl font-black text-[#74b8d3] font-['Manrope'] tracking-tight">KUMAR Store</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 scale-95 transition-transform cursor-pointer">notifications</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Page Title -->
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Mis Pedidos</h2>
+<p class="text-secondary-text text-sm mt-1 opacity-70">Gestiona y rastrea tus compras recientes</p>
+</div>
+<!-- Orders List -->
+<div class="space-y-6">
+<!-- Card 1: Entregado -->
+<div class="bg-surface-container rounded-2xl p-5 card-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-secondary-text font-bold">Pedido</span>
+<h3 class="text-lg font-bold text-on-surface">#K-2026-0042</h3>
+<p class="text-xs text-secondary-text">12 May, 2026</p>
+</div>
+<div class="bg-[#0d2d1a] px-3 py-1 rounded-full">
+<span class="text-[#4CAF50] text-[10px] font-extrabold uppercase tracking-tighter">Entregado</span>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-10 w-10 rounded-lg ring-2 ring-surface-container object-cover" data-alt="Close-up of a sleek red athletic sneaker on a dark editorial background with sharp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQbHlI_nT_x3CzPFfsitzxquPCBNeI6s9WFrLvZJumdrw_TgTLgPB0c7DRswlAXBfYFaPXRk5s67cRJf4vAunqLnK3ou999ZXr7ZL2R7fW396by5oLxUwqoMjY7VTXkfFKkZQmGIaB7Z8gybpa9M79njaIVJyT-NJX8gwwC_5kpFTH3ljA397Zan43TkJdi0nWjgaDJAs3rrMsbquWm0IEFPWtplw0tllcZP6Ncps21KsP5QllLozVpip57Rpcwj1nQi4-pMuQnCR"/>
+<img class="inline-block h-10 w-10 rounded-lg ring-2 ring-surface-container object-cover" data-alt="High-end minimal white smartwatch with a silicone strap on a dark reflective surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRbJLY_sNTC-2aa8UpNkNG2GWgdMZbtRZs_NtpjImdj94UCNHF9PwxSqmCKOcR6z6oyEnqxaRXGAAK9Lw_5rf470WZeg2c_5OMinQ8TjubEvwrrvAF-J64ELvi9XYpN-kVQiMErVy6EPqObWRFLsjFYbWlM37mwOUwpmxou8_Wu36AEAe79GLtqKq8EVzu28CYce46EtlHsO4MnShjGUF1uvy1FAvO869HxJk-LWsGdOC9M6IM0vZMzHeWdyNjKYX5cUn-oV4UKtZb"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-lg bg-surface-container-highest text-[10px] font-bold text-primary ring-2 ring-surface-container">+1</div>
+</div>
+<div class="ml-2">
+<p class="text-xs text-secondary-text">3 artículos</p>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-white/5 pt-4">
+<div>
+<span class="text-[10px] text-secondary-text uppercase tracking-widest block mb-1">Total Pagado</span>
+<span class="text-xl font-black text-on-surface">$182.66</span>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-surface px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                        Ver detalle
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Card 2: En camino -->
+<div class="bg-surface-container rounded-2xl p-5 card-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-secondary-text font-bold">Pedido</span>
+<h3 class="text-lg font-bold text-on-surface">#K-2026-0039</h3>
+<p class="text-xs text-secondary-text">10 May, 2026</p>
+</div>
+<div class="bg-[#2d1600] px-3 py-1 rounded-full">
+<span class="text-[#FF9800] text-[10px] font-extrabold uppercase tracking-tighter">En camino</span>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-10 w-10 rounded-lg ring-2 ring-surface-container object-cover" data-alt="Professional over-ear wireless headphones in matte black finish against a deep blue gradient backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBREjvb_3TunV22-asVLNQsZ7W58Y9tjjNPiU43-jqWWaC8rYiXPJnAfzmaSthj_17kUhwpjAaT6MRMk7d9A67yqJCtMMmUdXquDnLX2ObTuQtQ8mENDTxE3skWSR6xSTK7BdPQ2uk0qd2VJrwPAfk5MyT1odBHN-RYFxb02aSvSDvonn53NhnbFTwrItd-965RDIDal0p4PZQ3oLDobqvOa5MlUgEy8aZTtHTYntpv5Td2wXhWwdM5t9amUcb9w8IrOvRUlTDLAYrO"/>
+</div>
+<div class="ml-2">
+<p class="text-xs text-secondary-text">1 artículo</p>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-white/5 pt-4">
+<div>
+<span class="text-[10px] text-secondary-text uppercase tracking-widest block mb-1">Total Pagado</span>
+<span class="text-xl font-black text-on-surface">$95.00</span>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-surface px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                        Ver detalle
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Pendiente -->
+<div class="bg-surface-container rounded-2xl p-5 card-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-secondary-text font-bold">Pedido</span>
+<h3 class="text-lg font-bold text-on-surface">#K-2026-0035</h3>
+<p class="text-xs text-secondary-text">05 May, 2026</p>
+</div>
+<div class="bg-[#1a2235] px-3 py-1 rounded-full">
+<span class="text-[#7d8489] text-[10px] font-extrabold uppercase tracking-tighter">Pendiente</span>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block h-10 w-10 rounded-lg ring-2 ring-surface-container object-cover" data-alt="Classic canvas high-top sneakers in yellow against a contrasting dark navy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC8YHmSP9jEp9d3d5BT6GVJRTm3IbdLT5EycfVlTh_dax4bHr-_25_CEXcNpxrkSLTUbELI5Y97SHF6LY78JFLXxamnMpSd-j_ViyFwgs-TOrPRTw1pkMJSiPhFMI3JbViYlYOloubre5QdSLZ84KEmYEtDXeHhG3Etakg4hbymEfIQLWgrpPJvOqMA951RCDT4-eT8CbZRnOIYoVaklgwCkcI0kTAAxWU_FYP-ERr9qoA_1lElTHHvPJ3dbJpz5pdO1CgSu4F0y9Y"/>
+<img class="inline-block h-10 w-10 rounded-lg ring-2 ring-surface-container object-cover" data-alt="Luxury designer leather handbag in tan color with gold hardware on a clean dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp-5oJOkcb-P13tJKuGNIeBi_vEgP7Y6BmCHnwutVRGnIsYJo_nOhN7Py9Hwow1H0pU4u23qSxIKg35I8PbnBeB_ZE0eivYB0nhjfAL7mVS_aVkuWmI0uaeIpnkABV_hwGTplPTdb3nLiWU24nL4BM_Zz1iYKStux6a354WyKL1bvApdNaetWSZCRqrcES2MsYz42EI5Xy13tx88NIOjbPp1bQSCcMr4IgUe_Sw79TnXzvFOJrsJjd--x9sFkxUvyfs_JFjGT1avrs"/>
+</div>
+<div class="ml-2">
+<p class="text-xs text-secondary-text">2 artículos</p>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-white/5 pt-4">
+<div>
+<span class="text-[10px] text-secondary-text uppercase tracking-widest block mb-1">Total Pagado</span>
+<span class="text-xl font-black text-on-surface">$45.50</span>
+</div>
+<button class="flex items-center gap-2 bg-primary-container text-surface px-4 py-2 rounded-xl font-bold text-sm hover:opacity-90 transition-all active:scale-95">
+                        Ver detalle
+                        <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+<!-- Bento Styled Help Section -->
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[#74b8d3] mb-2">support_agent</span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#74b8d3]">Soporte</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-[#74b8d3] mb-2">replay</span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#74b8d3]">Devoluciones</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-[#0d1e3a]/90 backdrop-blur-xl flex justify-around items-center h-20 pb-safe px-4 shadow-[0_-4px_24px_rgba(0,0,0,0.4)]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</a>
+<!-- Catalog -->
+<a class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Catalog</span>
+</a>
+<!-- Cart -->
+<a class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Cart</span>
+</a>
+<!-- Orders (Active) -->
+<a class="flex flex-col items-center justify-center text-[#74b8d3] after:content-[''] after:w-1 after:h-1 after:bg-[#74b8d3] after:rounded-full after:mt-1 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Orders</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

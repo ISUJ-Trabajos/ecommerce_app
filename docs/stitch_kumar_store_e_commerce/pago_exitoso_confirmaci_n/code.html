@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-on-surface": "#253046",
+                "on-secondary": "#212e57",
+                "surface-container-lowest": "#030e22",
+                "on-primary-fixed": "#001f29",
+                "primary-fixed": "#b9eaff",
+                "tertiary-fixed-dim": "#c1c7cd",
+                "on-primary-fixed-variant": "#004d62",
+                "on-secondary-container": "#a7b3e4",
+                "error": "#ffb4ab",
+                "tertiary-fixed": "#dde3e9",
+                "surface-container": "#142034",
+                "on-background": "#d7e2ff",
+                "surface-container-highest": "#2a354a",
+                "primary-container": "#74b8d3",
+                "on-tertiary-fixed": "#161c20",
+                "outline-variant": "#3f484c",
+                "surface-container-low": "#101b30",
+                "surface-container-high": "#1f2a3f",
+                "on-primary-container": "#00485c",
+                "inverse-primary": "#15667f",
+                "on-secondary-fixed": "#0a1941",
+                "on-error-container": "#ffdad6",
+                "surface-dim": "#071327",
+                "inverse-surface": "#d7e2ff",
+                "primary-fixed-dim": "#8cd0ec",
+                "secondary-fixed-dim": "#b8c5f6",
+                "secondary-container": "#38456f",
+                "on-tertiary": "#2a3136",
+                "surface-variant": "#2a354a",
+                "tertiary-container": "#a9b0b5",
+                "surface-tint": "#8cd0ec",
+                "secondary-fixed": "#dbe1ff",
+                "tertiary": "#c5cbd1",
+                "surface-bright": "#2e394f",
+                "surface": "#071327",
+                "secondary": "#b8c5f6",
+                "on-surface": "#d7e2ff",
+                "on-secondary-fixed-variant": "#38456f",
+                "background": "#071327",
+                "outline": "#899297",
+                "on-surface-variant": "#bfc8cd",
+                "error-container": "#93000a",
+                "primary": "#90d4ef",
+                "on-tertiary-container": "#3c4348",
+                "on-tertiary-fixed-variant": "#41484c",
+                "on-error": "#690005",
+                "on-primary": "#003544"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #071327; color: #ededea; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md shadow-[0_32px_64px_-12px_rgba(0,0,0,0.15)] flex items-center justify-between px-6 h-16">
+<button class="text-[#74b8d3] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-black text-[#74b8d3] tracking-tighter font-['Manrope']">KUMAR Store</h1>
+<div class="w-6"></div> <!-- Spacer for center alignment -->
+</header>
+<main class="min-h-screen pt-16 pb-32 flex flex-col items-center justify-center px-6 relative overflow-hidden">
+<!-- Celestial Background Glows -->
+<div class="absolute top-1/4 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary/5 rounded-full blur-[100px]"></div>
+<!-- Success Content -->
+<div class="w-full max-w-md flex flex-col items-center text-center z-10">
+<!-- Checkmark Animation (Static Representation) -->
+<div class="relative mb-10 group">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-all duration-500"></div>
+<div class="relative w-32 h-32 rounded-full border-4 border-primary-container/30 flex items-center justify-center bg-surface-container-low shadow-[0_0_40px_rgba(116,184,211,0.2)]">
+<div class="w-24 h-24 rounded-full bg-primary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-surface text-6xl" style="font-variation-settings: 'FILL' 1, 'wght' 700;">check_circle</span>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-secondary/40"></div>
+<div class="absolute bottom-4 -left-6 w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+<!-- Typography Header -->
+<h2 class="text-3xl font-extrabold tracking-tight text-[#ededea] mb-3 leading-tight">
+                ¡Pedido confirmado!
+            </h2>
+<p class="text-[#74b8d3] font-semibold tracking-wide mb-6 text-sm">
+                Número de pedido: #KUMAR-2026-0042
+            </p>
+<div class="w-full p-6 rounded-3xl bg-surface-container-low/50 backdrop-blur-sm mb-12 border border-outline-variant/10">
+<p class="text-[#7d8489] text-base leading-relaxed">
+                    Recibirás tu comprobante de compra en tu correo electrónico de forma automática. ¡Gracias por confiar en KUMAR!
+                </p>
+</div>
+<!-- Action Buttons -->
+<div class="w-full space-y-4">
+<button class="w-full py-5 bg-primary-container text-surface font-bold rounded-xl text-lg hover:opacity-90 transition-all active:scale-[0.98] duration-200 shadow-[0_12px_24px_-8px_rgba(116,184,211,0.4)]">
+                    Ver mi pedido
+                </button>
+<button class="w-full py-5 border-2 border-[#74b8d3]/40 text-[#74b8d3] font-bold rounded-xl text-lg hover:bg-[#74b8d3]/5 transition-all active:scale-[0.98] duration-200">
+                    Seguir comprando
+                </button>
+</div>
+</div>
+<!-- Order Summary Preview (Curated Float style) -->
+<div class="mt-16 w-full max-w-md overflow-hidden rounded-3xl bg-surface-container-high/40 border border-outline-variant/10 flex items-center p-4">
+<div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 bg-surface">
+<img alt="Product Preview" class="w-full h-full object-cover opacity-80" data-alt="luxury minimalist watch on deep blue background with elegant lighting and metallic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOk1JxllcL8BCeZ70xGolKjkey1nq7Ci8yungejJXdx87dgXAamrzJ6H2yGbm5rZEtQ1G-tUvVW9fG3umU0sKA3Gg2qrc1SfaU6G89G5HMLYhzzrFqhCyTXX9cMEYX3zIh_bZ04zImuvHA0g3YhqTdOIRgAt20qDET5YFW5YNdDb3bUEtVtW8rGOlMach1I7YparlWXAMhAGWS2Oo9C52L-5AkKaxmzoLn3AzRmY-yfVZZYFqn3CmPa3FQULxUD2tHgWABQpo8UBC-"/>
+</div>
+<div class="ml-4 flex-grow">
+<p class="text-xs text-secondary-text uppercase tracking-widest font-bold opacity-60">Próxima Entrega</p>
+<h4 class="text-on-surface font-bold">KUMAR Chrono X1</h4>
+<p class="text-primary text-sm font-medium">Llega el Martes, 14 Oct</p>
+</div>
+<span class="material-symbols-outlined text-secondary-text opacity-40">chevron_right</span>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.3)] flex justify-around items-center px-4 py-3 pb-8">
+<a class="flex flex-col items-center justify-center text-[#7d8489] opacity-60 hover:text-[#74b8d3] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] opacity-60 hover:text-[#74b8d3] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest mt-1">Search</span>
+</a>
+<!-- Orders is Active -->
+<a class="flex flex-col items-center justify-center bg-[#74b8d3]/10 text-[#74b8d3] rounded-2xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] opacity-60 hover:text-[#74b8d3] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

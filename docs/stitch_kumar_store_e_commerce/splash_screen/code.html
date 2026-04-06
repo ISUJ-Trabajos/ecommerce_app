@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#1f2a3f",
+                    "tertiary": "#c5cbd1",
+                    "surface-bright": "#2e394f",
+                    "surface-variant": "#2a354a",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#41484c",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#bfc8cd",
+                    "on-secondary-container": "#a7b3e4",
+                    "secondary-container": "#38456f",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#161c20",
+                    "surface-tint": "#8cd0ec",
+                    "background": "#071327",
+                    "on-secondary-fixed": "#0a1941",
+                    "inverse-surface": "#d7e2ff",
+                    "outline": "#899297",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#d7e2ff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "surface": "#071327",
+                    "tertiary-fixed-dim": "#c1c7cd",
+                    "inverse-primary": "#15667f",
+                    "on-secondary-fixed-variant": "#38456f",
+                    "primary-container": "#74b8d3",
+                    "on-primary": "#003544",
+                    "tertiary-container": "#a9b0b5",
+                    "on-error": "#690005",
+                    "primary": "#90d4ef",
+                    "on-tertiary": "#2a3136",
+                    "on-tertiary-container": "#3c4348",
+                    "on-primary-fixed": "#001f29",
+                    "on-secondary": "#212e57",
+                    "surface-container-highest": "#2a354a",
+                    "surface-dim": "#071327",
+                    "secondary-fixed-dim": "#b8c5f6",
+                    "surface-container-lowest": "#030e22",
+                    "primary-fixed": "#b9eaff",
+                    "outline-variant": "#3f484c",
+                    "tertiary-fixed": "#dde3e9",
+                    "on-primary-container": "#00485c",
+                    "surface-container-low": "#101b30",
+                    "secondary": "#b8c5f6",
+                    "primary-fixed-dim": "#8cd0ec",
+                    "on-background": "#d7e2ff",
+                    "inverse-on-surface": "#253046",
+                    "surface-container": "#142034"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @keyframes shimmer {
+            0% { opacity: 0.3; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0.3; transform: scale(0.98); }
+        }
+        .animate-celestial-shimmer {
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        .loader-ring {
+            border: 2px solid rgba(116, 184, 211, 0.1);
+            border-top: 2px solid #74b8d3;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-background selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col overflow-hidden">
+<!-- Splash Screen Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center relative p-8">
+<!-- Ambient Celestial Glows -->
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-[100px]"></div>
+<!-- Central Branding Cluster -->
+<div class="relative z-10 flex flex-col items-center gap-12">
+<!-- Logo Container with Glassmorphism Elevation -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/20 rounded-[2.5rem] blur-2xl group-hover:blur-3xl transition-all duration-700 animate-celestial-shimmer"></div>
+<div class="relative w-32 h-32 md:w-40 md:h-40 rounded-[2.5rem] bg-surface-container-low flex items-center justify-center p-6 border border-outline-variant/10 shadow-2xl shadow-black/40 overflow-hidden">
+<img alt="KUMAR Store Premium Logo" class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(116,184,211,0.3)]" data-alt="Metallic celestial logo for KUMAR store, featuring sleek curves and a midnight navy and celeste color palette, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgUm06-8a0BA8CVW6OwnRerDB94uzyDnZjI2O6sH9jS3Swv8lIX2EJUUuI4Y3Aj5zhfPSaI5aqPH0pI4x6ZX4yrFQS-tS3VrT9HGpUcjGQBST3UToh2EzEF7uqSYk8mWb_IDZJ10yzlCWOpzGG_VR485ejdA6AH_RGnHtg8csnej-U-sSho73IgaI3oJx15EWha-tFwtwnWXGmPLT_3eMqQZAjR1K2-d6SbO3llZHzGtldJ6ftjFVwzxjigiLrFA57aenSPY_jdrRp"/>
+</div>
+</div>
+<!-- Typography Anchor -->
+<div class="text-center space-y-3">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter text-primary-container font-headline uppercase">
+                    KUMAR Store
+                </h1>
+<p class="text-secondary-text font-label text-sm md:text-base tracking-[0.2em] font-light uppercase opacity-60">
+                    The Celestial Curator
+                </p>
+</div>
+<!-- Discrete Loading Indicator -->
+<div class="mt-8 flex flex-col items-center gap-4">
+<div class="loader-ring"></div>
+<span class="text-xs font-label text-outline tracking-widest uppercase animate-pulse">
+                    Initializing
+                </span>
+</div>
+</div>
+<!-- Footer Branding (Minimalist) -->
+<div class="absolute bottom-12 text-center">
+<div class="flex items-center gap-2 text-outline-variant/50">
+<span class="h-[1px] w-8 bg-current"></span>
+<span class="text-[10px] font-label tracking-widest uppercase">Premium Retail Experience</span>
+<span class="h-[1px] w-8 bg-current"></span>
+</div>
+</div>
+</main>
+<!-- Navigation Suppressed as per "The Destination Rule" & "Splash Screen" requirements -->
+<!-- This screen represents a transactional/loading state, thus global shells are omitted to maintain focus -->
+</body></html>

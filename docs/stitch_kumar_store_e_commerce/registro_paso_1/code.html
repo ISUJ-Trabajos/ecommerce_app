@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#1f2a3f",
+                    "tertiary": "#c5cbd1",
+                    "surface-bright": "#2e394f",
+                    "surface-variant": "#2a354a",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#41484c",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#bfc8cd",
+                    "on-secondary-container": "#a7b3e4",
+                    "secondary-container": "#38456f",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#161c20",
+                    "surface-tint": "#8cd0ec",
+                    "background": "#071327",
+                    "on-secondary-fixed": "#0a1941",
+                    "inverse-surface": "#d7e2ff",
+                    "outline": "#899297",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#d7e2ff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "surface": "#071327",
+                    "tertiary-fixed-dim": "#c1c7cd",
+                    "inverse-primary": "#15667f",
+                    "on-secondary-fixed-variant": "#38456f",
+                    "primary-container": "#74b8d3",
+                    "on-primary": "#003544",
+                    "tertiary-container": "#a9b0b5",
+                    "on-error": "#690005",
+                    "primary": "#90d4ef",
+                    "on-tertiary": "#2a3136",
+                    "on-tertiary-container": "#3c4348",
+                    "on-primary-fixed": "#001f29",
+                    "on-secondary": "#212e57",
+                    "surface-container-highest": "#2a354a",
+                    "surface-dim": "#071327",
+                    "secondary-fixed-dim": "#b8c5f6",
+                    "surface-container-lowest": "#030e22",
+                    "primary-fixed": "#b9eaff",
+                    "outline-variant": "#3f484c",
+                    "tertiary-fixed": "#dde3e9",
+                    "on-primary-container": "#00485c",
+                    "surface-container-low": "#101b30",
+                    "secondary": "#b8c5f6",
+                    "primary-fixed-dim": "#8cd0ec",
+                    "on-background": "#d7e2ff",
+                    "inverse-on-surface": "#253046",
+                    "surface-container": "#142034"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shell (Suppressed visually as per navigation rules for transactional pages, but mapped for structure if needed) -->
+<!-- The prompt implies a focused journey (Signup), so Nav Bars are excluded to prioritize content canvas -->
+<main class="relative min-h-screen flex flex-col items-center justify-center px-6 py-12 overflow-hidden">
+<!-- Celestial Decorative Background Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 bg-secondary-container/20 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- Registration Container -->
+<div class="w-full max-w-md z-10">
+<!-- Logo/Identity Anchor -->
+<div class="mb-12 text-center">
+<span class="text-primary-container font-black text-3xl tracking-tighter uppercase">KUMAR</span>
+</div>
+<!-- Progress Indicator -->
+<div class="flex items-center justify-between mb-10 px-2">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-1.5 rounded-full bg-primary-container shadow-[0_0_12px_rgba(116,184,211,0.4)]"></div>
+<span class="text-[10px] font-bold text-primary-container uppercase tracking-widest">Paso 01</span>
+</div>
+<div class="flex-1 h-[2px] mx-4 bg-surface-container-high relative top-[-6px]"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-highest"></div>
+<span class="text-[10px] font-bold text-secondary-text uppercase tracking-widest opacity-40">Paso 02</span>
+</div>
+</div>
+<!-- Header Section -->
+<div class="mb-10">
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight mb-2">Crea tu cuenta</h1>
+<p class="text-secondary-text text-sm leading-relaxed max-w-[280px]">Únete a la experiencia de curaduría celestial en KUMAR Store.</p>
+</div>
+<!-- Form Content -->
+<form class="space-y-6">
+<!-- Nombre Completo -->
+<div class="group">
+<label class="block text-xs font-bold text-secondary-text uppercase tracking-widest mb-2 px-1">Nombre completo</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary-text group-focus-within:text-primary-container transition-colors">person</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-secondary-text/50 focus:ring-2 focus:ring-primary-container/30 transition-all outline-none" placeholder="Ej. Mateo Cevallos" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="group">
+<label class="block text-xs font-bold text-secondary-text uppercase tracking-widest mb-2 px-1">Email</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary-text group-focus-within:text-primary-container transition-colors">alternate_email</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-secondary-text/50 focus:ring-2 focus:ring-primary-container/30 transition-all outline-none" placeholder="nombre@ejemplo.com" type="email"/>
+</div>
+</div>
+<!-- Grid for Date and Phone -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Fecha de Nacimiento -->
+<div class="group">
+<label class="block text-xs font-bold text-secondary-text uppercase tracking-widest mb-2 px-1">Fecha de nacimiento</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary-text group-focus-within:text-primary-container transition-colors">calendar_today</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-secondary-text/50 focus:ring-2 focus:ring-primary-container/30 transition-all outline-none" onblur="(this.type='text')" onfocus="(this.type='date')" placeholder="DD/MM/AAAA" type="text"/>
+</div>
+</div>
+<!-- Teléfono -->
+<div class="group">
+<label class="block text-xs font-bold text-secondary-text uppercase tracking-widest mb-2 px-1">Teléfono</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-secondary-text group-focus-within:text-primary-container transition-colors">smartphone</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 text-on-surface placeholder:text-secondary-text/50 focus:ring-2 focus:ring-primary-container/30 transition-all outline-none" placeholder="+593" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Primary Action -->
+<div class="pt-6">
+<button class="w-full bg-primary-container text-surface font-extrabold py-5 rounded-xl shadow-xl shadow-primary-container/10 hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2 group" type="submit">
+<span>Siguiente</span>
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Footer Link -->
+<div class="mt-10 text-center">
+<a class="inline-block text-sm font-semibold text-secondary-text hover:text-primary-container transition-colors underline-offset-8 decoration-primary-container/30 hover:underline" href="#">
+                    Ya tengo cuenta. Iniciar sesión
+                </a>
+</div>
+</div>
+<!-- Branding Visual - Curated Float (Asymmetric element) -->
+<div class="hidden lg:block absolute -right-20 top-1/2 -translate-y-1/2 w-1/3 aspect-[4/5] bg-surface-container rounded-3xl overflow-hidden shadow-2xl opacity-40">
+<img class="w-full h-full object-cover" data-alt="Premium fashion accessories displayed in a moody, celestial-inspired set with deep navy shadows and soft blue accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8BIadEIEqej9LLE-yVBUq-M0Py4U6Ar2F4Jj6vRHCyJ4wrtJ39cXv_0B9O5bRrUdoLUxRc9nDjvZM_573WpOb8nzCvbYBU2WpQRtS5XDWyERSFDUVnq7sT5zbMvRgYKJWJ4fKSPG7oxe1Zc7kXm5dfKpLAqA2qU9EOzWBfuMH1YYbH-I0jWCxU5ZPK2gG6fAM5gVFM0JZIRll__MIYMIHkQyWs6tzRNYUSoiJ5UWp96keSG1fbBgRRiHN4EavnsJ2OlvjS_7S54Dk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</main>
+</body></html>

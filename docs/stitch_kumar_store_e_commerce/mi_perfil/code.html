@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#1f2a3f",
+                    "tertiary": "#c5cbd1",
+                    "surface-bright": "#2e394f",
+                    "surface-variant": "#2a354a",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#41484c",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#bfc8cd",
+                    "on-secondary-container": "#a7b3e4",
+                    "secondary-container": "#38456f",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#161c20",
+                    "surface-tint": "#8cd0ec",
+                    "background": "#071327",
+                    "on-secondary-fixed": "#0a1941",
+                    "inverse-surface": "#d7e2ff",
+                    "outline": "#899297",
+                    "on-error-container": "#ffdad6",
+                    "on-surface": "#d7e2ff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "surface": "#071327",
+                    "tertiary-fixed-dim": "#c1c7cd",
+                    "inverse-primary": "#15667f",
+                    "on-secondary-fixed-variant": "#38456f",
+                    "primary-container": "#74b8d3",
+                    "on-primary": "#003544",
+                    "tertiary-container": "#a9b0b5",
+                    "on-error": "#690005",
+                    "primary": "#90d4ef",
+                    "on-tertiary": "#2a3136",
+                    "on-tertiary-container": "#3c4348",
+                    "on-primary-fixed": "#001f29",
+                    "on-secondary": "#212e57",
+                    "surface-container-highest": "#2a354a",
+                    "surface-dim": "#071327",
+                    "secondary-fixed-dim": "#b8c5f6",
+                    "surface-container-lowest": "#030e22",
+                    "primary-fixed": "#b9eaff",
+                    "outline-variant": "#3f484c",
+                    "tertiary-fixed": "#dde3e9",
+                    "on-primary-container": "#00485c",
+                    "surface-container-low": "#101b30",
+                    "secondary": "#b8c5f6",
+                    "primary-fixed-dim": "#8cd0ec",
+                    "on-background": "#d7e2ff",
+                    "inverse-on-surface": "#253046",
+                    "surface-container": "#142034"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #071327;
+            font-family: 'Manrope', sans-serif;
+            color: #ededea;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md flex justify-between items-center px-6 h-16 shadow-xl shadow-black/20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3]">menu</span>
+<h1 class="font-['Manrope'] font-bold tracking-tight text-xl font-black text-[#74b8d3]">KUMAR Store</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#74b8d3]">notifications</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Header Profile Section -->
+<section class="flex flex-col items-center mb-10">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full bg-gradient-to-tr from-[#74b8d3] to-[#b8c5f6] flex items-center justify-center shadow-2xl shadow-[#74b8d3]/20 border-2 border-[#74b8d3]/30">
+<span class="text-3xl font-extrabold text-[#071327] tracking-tighter">RK</span>
+</div>
+<div class="absolute bottom-0 right-0 bg-[#74b8d3] p-1.5 rounded-full border-4 border-background">
+<span class="material-symbols-outlined text-[#071327] text-sm" style="font-variation-settings: 'FILL' 1;">edit</span>
+</div>
+</div>
+<div class="mt-6 text-center">
+<h2 class="text-2xl font-extrabold text-[#ededea] tracking-tight">Ricardo Kumar</h2>
+<p class="text-[#7d8489] text-sm font-medium mt-1">ricardo@kumar.ec</p>
+</div>
+</section>
+<!-- Profile Navigation Cards -->
+<div class="space-y-4">
+<!-- Navigation Card: Mis pedidos -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-[#1f2a3f] transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-[#74b8d3]">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="text-on-surface font-semibold tracking-wide">Mis pedidos</span>
+</div>
+<span class="material-symbols-outlined text-[#7d8489] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Navigation Card: Mis direcciones -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-[#1f2a3f] transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-[#74b8d3]">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="text-on-surface font-semibold tracking-wide">Mis direcciones</span>
+</div>
+<span class="material-symbols-outlined text-[#7d8489] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Navigation Card: Métodos de pago -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-[#1f2a3f] transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-[#74b8d3]">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-on-surface font-semibold tracking-wide">Métodos de pago</span>
+</div>
+<span class="material-symbols-outlined text-[#7d8489] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Navigation Card: Configuración -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-[#1f2a3f] transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-[#74b8d3]">
+<span class="material-symbols-outlined">settings</span>
+</div>
+<span class="text-on-surface font-semibold tracking-wide">Configuración</span>
+</div>
+<span class="material-symbols-outlined text-[#7d8489] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Navigation Card: Centro de ayuda -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-[#1f2a3f] transition-all duration-300" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-[#74b8d3]">
+<span class="material-symbols-outlined">help_center</span>
+</div>
+<span class="text-on-surface font-semibold tracking-wide">Centro de ayuda</span>
+</div>
+<span class="material-symbols-outlined text-[#7d8489] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<!-- Navigation Card: Cerrar sesión -->
+<a class="flex items-center justify-between p-5 bg-[#132149] rounded-2xl group hover:bg-error-container/20 transition-all duration-300 mt-8" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-error-container/20 flex items-center justify-center text-[#F44336]">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<span class="text-[#F44336] font-bold tracking-wide">Cerrar sesión</span>
+</div>
+</a>
+</div>
+<!-- App Metadata -->
+<footer class="mt-16 text-center pb-8">
+<p class="text-[#7d8489] text-[10px] font-bold uppercase tracking-[0.2em] opacity-50">v1.0.2 - KUMAR Store 2026</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-[#0d1e3a]/90 backdrop-blur-xl flex justify-around items-center h-20 pb-safe px-4 shadow-[0_-4px_24px_rgba(0,0,0,0.4)]">
+<button class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Catalog</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors">
+<span class="material-symbols-outlined mb-1">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Cart</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors">
+<span class="material-symbols-outlined mb-1">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Orders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#74b8d3] after:content-[''] after:w-1 after:h-1 after:bg-[#74b8d3] after:rounded-full after:mt-1">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest">Profile</span>
+</button>
+</nav>
+</body></html>

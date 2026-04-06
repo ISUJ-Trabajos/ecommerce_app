@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import * as SecureStore from 'expo-secure-store';
 import NetInfo from '@react-native-community/netinfo';
+import { Platform } from 'react-native';
 
 interface User {
   id: string;
@@ -19,15 +20,40 @@ interface AuthState {
   checkSession: () => Promise<void>;
 }
 
+// Storage helper para evitar crashes en Web
+const setStorageItem = async (key: string, value: string) => {
+  if (Platform.OS === 'web') {
+    localStorage.setItem(key, value);
+  } else {
+    await SecureStore.setItemAsync(key, value);
+  }
+};
+
+const getStorageItem = async (key: string) => {
+  if (Platform.OS === 'web') {
+    return localStorage.getItem(key);
+  } else {
+    return await SecureStore.getItemAsync(key);
+  }
+};
+
+const removeStorageItem = async (key: string) => {
+  if (Platform.OS === 'web') {
+    localStorage.removeItem(key);
+  } else {
+    await SecureStore.deleteItemAsync(key);
+  }
+};
+
 export const useAuthStore = create<AuthState>((set, get) => ({
   accessToken: null,
   user: null,
   isAuthenticated: false,
 
   setAuth: async (accessToken, refreshToken, user) => {
-    await SecureStore.setItemAsync('refresh_token', refreshToken);
+    await setStorageItem('refresh_token', refreshToken);
     // Ideally user data is also cached or we just rely on fetch
-    await SecureStore.setItemAsync('user_data', JSON.stringify(user));
+    await setStorageItem('user_data', JSON.stringify(user));
     set({ accessToken, user, isAuthenticated: true });
   },
 
@@ -37,26 +63,28 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     const netState = await NetInfo.fetch();
     if (!netState.isConnected) {
       // Offline script: defer logout till online.
-      // But we clear state so they can't do requests, keeping data in cache. 
-      // Actually, if we want offline view, we might not want to clear user data.
       return; 
     }
     
-    await SecureStore.deleteItemAsync('refresh_token');
-    await SecureStore.deleteItemAsync('user_data');
+    await removeStorageItem('refresh_token');
+    await removeStorageItem('user_data');
     set({ accessToken: null, user: null, isAuthenticated: false });
   },
 
   checkSession: async () => {
-    const refreshToken = await SecureStore.getItemAsync('refresh_token');
-    const userDataStr = await SecureStore.getItemAsync('user_data');
-    
-    if (refreshToken && userDataStr) {
-      set({ 
-        isAuthenticated: true, 
-        user: JSON.parse(userDataStr) 
-      });
-    } else {
+    try {
+      const refreshToken = await getStorageItem('refresh_token');
+      const userDataStr = await getStorageItem('user_data');
+      
+      if (refreshToken && userDataStr) {
+        set({ 
+          isAuthenticated: true, 
+          user: JSON.parse(userDataStr) 
+        });
+      } else {
+        set({ isAuthenticated: false, user: null, accessToken: null });
+      }
+    } catch (e) {
       set({ isAuthenticated: false, user: null, accessToken: null });
     }
   }

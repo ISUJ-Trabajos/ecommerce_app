@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#c1c7cd",
+                    "surface-container-lowest": "#030e22",
+                    "on-tertiary-fixed": "#161c20",
+                    "on-error": "#690005",
+                    "inverse-surface": "#d7e2ff",
+                    "secondary-container": "#38456f",
+                    "on-primary-fixed": "#001f29",
+                    "on-primary-container": "#00485c",
+                    "primary-container": "#74b8d3",
+                    "background": "#071327",
+                    "on-secondary": "#212e57",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-container": "#3c4348",
+                    "inverse-primary": "#15667f",
+                    "surface-container": "#142034",
+                    "secondary-fixed": "#dbe1ff",
+                    "surface-dim": "#071327",
+                    "on-tertiary": "#2a3136",
+                    "outline-variant": "#3f484c",
+                    "on-surface": "#d7e2ff",
+                    "tertiary": "#c5cbd1",
+                    "surface-container-highest": "#2a354a",
+                    "on-primary": "#003544",
+                    "secondary-fixed-dim": "#b8c5f6",
+                    "on-secondary-fixed-variant": "#38456f",
+                    "surface-variant": "#2a354a",
+                    "surface-container-high": "#1f2a3f",
+                    "primary": "#90d4ef",
+                    "on-primary-fixed-variant": "#004d62",
+                    "surface-bright": "#2e394f",
+                    "outline": "#899297",
+                    "surface-container-low": "#101b30",
+                    "primary-fixed": "#b9eaff",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed": "#0a1941",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed": "#dde3e9",
+                    "surface": "#071327",
+                    "on-background": "#d7e2ff",
+                    "tertiary-container": "#a9b0b5",
+                    "inverse-on-surface": "#253046",
+                    "secondary": "#b8c5f6",
+                    "on-surface-variant": "#bfc8cd",
+                    "on-tertiary-fixed-variant": "#41484c",
+                    "primary-fixed-dim": "#8cd0ec",
+                    "on-secondary-container": "#a7b3e4",
+                    "surface-tint": "#8cd0ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #071327; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-container selection:text-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md shadow-xl shadow-black/20 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 transition-transform scale-95" data-icon="menu">menu</span>
+<span class="text-xl font-black text-[#74b8d3] font-['Manrope'] tracking-tight">KUMAR Store</span>
+</div>
+<div class="flex items-center">
+<div class="relative">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 transition-transform scale-95" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-28 px-6 max-w-2xl mx-auto">
+<!-- Personalized Welcome -->
+<section class="mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight text-on-surface mb-1">Hola, Carlos 👋</h1>
+<p class="text-secondary-text text-[#7d8489] font-medium">Descubre las tendencias de hoy.</p>
+</section>
+<!-- Search Bar -->
+<div class="mb-8">
+<div class="bg-[#132149] rounded-xl flex items-center px-4 py-3.5 shadow-inner transition-all focus-within:ring-2 focus-within:ring-primary/40">
+<span class="material-symbols-outlined text-outline mr-3" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface w-full placeholder:text-outline/60 text-sm" placeholder="Buscar productos..." type="text"/>
+</div>
+</div>
+<!-- Category Chips -->
+<section class="mb-10 -mx-6">
+<div class="flex gap-3 overflow-x-auto hide-scrollbar px-6">
+<div class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-5 py-3 rounded-full flex-shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="apparel">apparel</span>
+<span class="text-sm font-semibold">Moda</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-5 py-3 rounded-full flex-shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="watch">watch</span>
+<span class="text-sm font-semibold">Accesorios</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-5 py-3 rounded-full flex-shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="chair">chair</span>
+<span class="text-sm font-semibold">Hogar</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-5 py-3 rounded-full flex-shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="content_cut">content_cut</span>
+<span class="text-sm font-semibold">Cosméticos</span>
+</div>
+</div>
+</section>
+<!-- Best Sellers (Carousel) -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-bold tracking-tight">Best Sellers</h2>
+<span class="text-primary text-sm font-bold">Ver todo</span>
+</div>
+<div class="flex gap-5 overflow-x-auto hide-scrollbar -mx-2 px-2">
+<!-- Product 1 -->
+<div class="w-48 flex-shrink-0 bg-[#132149] p-3 rounded-2xl shadow-lg">
+<div class="w-full aspect-[4/5] bg-surface-container-lowest rounded-xl mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern sleek white wristwatch on a dark slate background with professional studio lighting and clean minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9qXnTpRD9AQqXHtFitZsORrJaOlQ_hdRvumX0Ih7zAmC0jy5wr8n8eK2yUaFiyqiRM5gdb8AoaUY3YaNNYAlcpVUIQiba23KTnbPl3n2bH59B0vJt6hLOWLmoGj3bBULhZyGUIrcN2sVNJ7yJydgKvf1a92Xrm3IFie20D4gKQoEd-iPjSlHlq1i0nOoIBLLfaM-oOJg16sTNznPgkHcHAOscKCd_XdnT-u6bA-VyGElay8lMsMsr8hTb7GbBe5GIq7OsKPIXRP3z"/>
+</div>
+<h3 class="text-sm font-semibold line-clamp-1 mb-1">Celestial Watch</h3>
+<p class="text-[#74b8d3] font-bold">$129.00</p>
+</div>
+<!-- Product 2 -->
+<div class="w-48 flex-shrink-0 bg-[#132149] p-3 rounded-2xl shadow-lg">
+<div class="w-full aspect-[4/5] bg-surface-container-lowest rounded-xl mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vibrant red athletic sneaker positioned diagonally on a deep navy background with dramatic high-contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdDk5bM0vd0yWw63ComjPoHbAQEoaR6h4QZ-3OetEFrCm0tJ2qWRmq4v1xiExsStcowMmWdFErxre81dz1n13XMhjogfJLn4eZnMRiik8N9zTvOuE9IJ3WbgLGS0f-5orYxG4c7Cm662Lu3igqUysH1Mrz6Lb8z0xYFP6rSa4AHXq2w5y7M5hi0RPYkoXSzlyP2x5XazyvwMA6_YjdFffyxpRyBMv3yu6FbK7IKpUYY8lcAkkgiLdHR_R1NhPpgLVZOCHy9ihL83Ld"/>
+</div>
+<h3 class="text-sm font-semibold line-clamp-1 mb-1">Hyper Red Runner</h3>
+<p class="text-[#74b8d3] font-bold">$85.00</p>
+</div>
+<!-- Product 3 -->
+<div class="w-48 flex-shrink-0 bg-[#132149] p-3 rounded-2xl shadow-lg">
+<div class="w-full aspect-[4/5] bg-surface-container-lowest rounded-xl mb-3 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Premium black over-ear headphones with metallic details resting on a dark velvet surface under soft cinematic blue light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk_HKP7lbdtRNnYfKhrDsiDwX3CC2NrYjQ-zZsTwUKIHfB73819ePQm9FNkESPZ_ZLKQDOknGf96oIHpdYdSm1JmxBipwz7hbGlUifG8EraSs-UKHY7WuFRJJ7VsT-YJ0WSAUvZU2ZZGfmykQBRu5Ji6U94bL-LfUFIV2OqcGe-B_SdmaYFfiy9h5ASDoDUztDo9U1KbyhJMqAyiXn_HAwR2N8eXD-1ok1tOdSyfL4bwPKYE-Yx95E371orGJpQPtE5o1WlnPdHFOD"/>
+</div>
+<h3 class="text-sm font-semibold line-clamp-1 mb-1">Sonic Pro Max</h3>
+<p class="text-[#74b8d3] font-bold">$210.00</p>
+</div>
+</div>
+</section>
+<!-- 'En Oferta' (Grid) -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-6">
+<h2 class="text-2xl font-bold tracking-tight">En Oferta</h2>
+<div class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded font-black uppercase tracking-widest">Hot Deals</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Sale Item 1 -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden relative border border-outline-variant/10">
+<div class="absolute top-2 right-2 z-10 bg-error text-on-error text-[10px] font-bold px-2 py-1 rounded-full">-25%</div>
+<div class="aspect-square w-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Classic canvas high-top sneakers in a moody editorial setting with shadows and highlights emphasizing texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWG3Fj9anlpF1MP12xpagq0UFt9qyp3M6BeH0RBYUYmWJ_eGdoFSVcnWmo2P0yV1eZt3VFjQa4PzbXVFVbUh4degEfuKSPOSYd-rK6EW9V3pN0CEliaS4RTucCuZ9ZNy6mycStdlcDXeEU6jKT33x4XBKvNcRiWluz2P6p8Tq_encwP_WYYic0336FhVilSSvNCuLqhhOBKFggJr7YSFkGWpizgH2w53VS0s5rs3RbBpQYU2xGbIgbpdGX7Qd9MkBzpYnFwGXXsuk_"/>
+</div>
+<div class="p-3">
+<h3 class="text-xs font-medium text-on-surface-variant mb-1">Canvas Classic</h3>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">$45.00</span>
+<span class="text-[10px] text-outline line-through">$60.00</span>
+</div>
+</div>
+</div>
+<!-- Sale Item 2 -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden relative border border-outline-variant/10">
+<div class="absolute top-2 right-2 z-10 bg-error text-on-error text-[10px] font-bold px-2 py-1 rounded-full">-25%</div>
+<div class="aspect-square w-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Designer black sunglasses with golden frame details resting on a dark reflective surface with moody celestial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfzSchYVlA0eLg9WePC1H4BZ65VmRnPsuHOWLOiA9TB-OJO0vBWFHdz4t9luZ1a4cpdYX4gy1sT7xr_4LGIEX_gezjoCPkTyotKkqOQh3JTGx82rHuXlAch7ZH8yDuGdxETOqgLunRKAg0ZGzkxVon5jqu_kwz4rmAc-72YinEaUiG4EHcEMT9S5-VcnhPoPd3mvQszzK745Zf57rE686qsxNhmSFCBQD_VyOTfbg1PODlNDq2JO_D2lTRYqsxwzclMUx1R20whWOz"/>
+</div>
+<div class="p-3">
+<h3 class="text-xs font-medium text-on-surface-variant mb-1">Eclipse Shades</h3>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">$75.00</span>
+<span class="text-[10px] text-outline line-through">$100.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Float Signature -->
+<section class="mb-12 relative">
+<div class="bg-surface-container-high rounded-3xl p-8 flex flex-col justify-center min-h-[320px] overflow-hidden relative">
+<div class="relative z-10 max-w-[60%]">
+<span class="text-primary font-black uppercase text-[10px] tracking-[0.2em] mb-2 block">Edición Limitada</span>
+<h2 class="text-3xl font-black text-white leading-tight mb-4">Colección Invierno 2024</h2>
+<button class="bg-primary-container text-surface px-6 py-2.5 rounded-xl font-bold text-sm transition-transform active:scale-95">Descubrir</button>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/2 overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 translate-x-4" data-alt="Editorial portrait of a stylish man in a heavy textured wool overcoat looking away in a dark urban night setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtSFV6pfNbYV_h2eiY9k-9LsqfHxLlVjK3RyrN1F4zXgk7me3vWFXSEg6-iO14z0DDPaMSJunqHZSe4Xnzo3R--9gZX1Qyy4wMCsfnjdCDhEwolr0OFebqFB-dKRNNkU_4ZwzjuBHHXfyMb5JslYC9BU3lbKwPX2tmsCYB4Tg5df084yI9VzTBtm-TOm22RH6OyPz-9VccA3KXy4QHK7OBDwCficZn9ZTB7hCy-8c85NznQaZFmbsEtroFJMKSSTywOb2WDbQ4F3oC"/>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-[#0d1e3a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.4)] flex justify-around items-center h-20 pb-safe px-4">
+<div class="flex flex-col items-center justify-center text-[#74b8d3] after:content-[''] after:w-1 after:h-1 after:bg-[#74b8d3] after:rounded-full after:mt-1 scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Catalog</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200 cursor-pointer relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Cart</span>
+<span class="absolute top-0 right-0 -mr-1 -mt-1 bg-[#74b8d3] text-[#071327] text-[8px] font-bold px-1 rounded-full min-w-[14px] text-center">2</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors scale-90 duration-200 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

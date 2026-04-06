@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KUMAR Store - Panel Administrativo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#161c20",
+                      "on-surface": "#d7e2ff",
+                      "surface-variant": "#2a354a",
+                      "secondary-container": "#38456f",
+                      "on-tertiary-fixed-variant": "#41484c",
+                      "on-primary-fixed-variant": "#004d62",
+                      "surface-container-lowest": "#030e22",
+                      "error": "#ffb4ab",
+                      "tertiary-container": "#a9b0b5",
+                      "surface": "#071327",
+                      "on-background": "#d7e2ff",
+                      "on-error-container": "#ffdad6",
+                      "on-error": "#690005",
+                      "inverse-surface": "#d7e2ff",
+                      "outline": "#899297",
+                      "on-secondary-fixed-variant": "#38456f",
+                      "primary-fixed-dim": "#8cd0ec",
+                      "on-tertiary": "#2a3136",
+                      "surface-container": "#142034",
+                      "background": "#071327",
+                      "on-primary-fixed": "#001f29",
+                      "surface-dim": "#071327",
+                      "primary-fixed": "#b9eaff",
+                      "surface-container-high": "#1f2a3f",
+                      "primary-container": "#74b8d3",
+                      "tertiary-fixed-dim": "#c1c7cd",
+                      "tertiary-fixed": "#dde3e9",
+                      "primary": "#90d4ef",
+                      "secondary-fixed": "#dbe1ff",
+                      "tertiary": "#c5cbd1",
+                      "secondary-fixed-dim": "#b8c5f6",
+                      "on-secondary-fixed": "#0a1941",
+                      "on-secondary-container": "#a7b3e4",
+                      "outline-variant": "#3f484c",
+                      "secondary": "#b8c5f6",
+                      "on-primary-container": "#00485c",
+                      "surface-bright": "#2e394f",
+                      "inverse-on-surface": "#253046",
+                      "on-tertiary-container": "#3c4348",
+                      "on-surface-variant": "#bfc8cd",
+                      "surface-container-highest": "#2a354a",
+                      "on-secondary": "#212e57",
+                      "error-container": "#93000a",
+                      "surface-tint": "#8cd0ec",
+                      "on-primary": "#003544",
+                      "inverse-primary": "#15667f",
+                      "surface-container-low": "#101b30"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-[#071327]/80 backdrop-blur-md z-50 shadow-[0_32px_64px_rgba(0,0,0,0.15)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3]" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-[#74b8d3] uppercase tracking-widest">KUMAR Store</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-[10px] font-black tracking-widest">ADMIN</div>
+<div class="relative">
+<span class="material-symbols-outlined text-[#ededea]" data-icon="notifications">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="professional portrait of a man with clean-cut appearance wearing a dark tailored suit in a studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWIH3_G4hE1GgTLxo4EclR6ftdfKErVl4weZXWbuZokvxmiW9UxC1omHnVC4_0AvJKYqXNQbucbCTS6BJ-Wp-Queovy5vJrUw0e27cd_2cES4Uv80nXFo8eIkees3EfOMo572b2LYCx_dUJAhKdok26sBkRhlDt8O_SgiX_yjq30JwM40b_HhlmYUtF7xDEXo567AeORZctrf6RbTo5XJ2B3A7axnhA6soMd0Kpqx774TOd5Upof1_XxzYWlqf8oQ3UKM3pZ7C5j9a"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto">
+<!-- Dashboard Header -->
+<div class="mb-8">
+<p class="text-secondary-text text-sm uppercase tracking-widest font-semibold mb-1">Bienvenido de vuelta</p>
+<h2 class="text-3xl font-extrabold text-[#ededea] tracking-tight">Panel Administrativo</h2>
+</div>
+<!-- Metrics Cards: Horizontal Scroll -->
+<div class="flex gap-4 overflow-x-auto pb-4 -mx-6 px-6 no-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[160px] bg-surface-container p-5 rounded-xl flex-shrink-0 shadow-[0_16px_32px_rgba(0,0,0,0.2)]">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="today">today</span>
+<p class="text-[#7d8489] text-xs font-semibold uppercase mb-1">Ventas hoy</p>
+<p class="text-2xl font-bold text-[#ededea] tracking-tight">$450</p>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[160px] bg-surface-container p-5 rounded-xl flex-shrink-0 shadow-[0_16px_32px_rgba(0,0,0,0.2)]">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="calendar_view_week">calendar_view_week</span>
+<p class="text-[#7d8489] text-xs font-semibold uppercase mb-1">Esta semana</p>
+<p class="text-2xl font-bold text-[#ededea] tracking-tight">$2,340</p>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[160px] bg-surface-container p-5 rounded-xl flex-shrink-0 shadow-[0_16px_32px_rgba(0,0,0,0.2)] border-r border-transparent">
+<span class="material-symbols-outlined text-primary mb-3" data-icon="calendar_month">calendar_month</span>
+<p class="text-[#7d8489] text-xs font-semibold uppercase mb-1">Este mes</p>
+<p class="text-2xl font-bold text-[#ededea] tracking-tight">$8,920</p>
+</div>
+</div>
+<!-- Sales Chart Section -->
+<section class="mt-8 mb-10">
+<div class="flex justify-between items-end mb-4">
+<h3 class="text-lg font-bold text-[#ededea]">Rendimiento Mensual</h3>
+<span class="text-xs text-primary font-semibold tracking-wide">+12.5% vs prev.</span>
+</div>
+<div class="bg-surface-container-low h-48 rounded-2xl p-4 flex flex-col justify-end relative overflow-hidden">
+<!-- Decorative Grid/Chart Mockup using Tailwind -->
+<div class="absolute inset-0 opacity-10 flex items-center justify-around pointer-events-none">
+<div class="h-full w-px bg-outline"></div>
+<div class="h-full w-px bg-outline"></div>
+<div class="h-full w-px bg-outline"></div>
+<div class="h-full w-px bg-outline"></div>
+</div>
+<div class="relative h-full flex items-end gap-1">
+<!-- Faux Line Chart using SVG -->
+<svg class="absolute top-0 left-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q10,70 20,75 T40,40 T60,50 T80,20 T100,30" fill="none" stroke="#74b8d3" stroke-width="2"></path>
+<path d="M0,80 Q10,70 20,75 T40,40 T60,50 T80,20 T100,30 V100 H0 Z" fill="url(#grad)" opacity="0.2"></path>
+<defs>
+<lineargradient id="grad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#74b8d3;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#74b8d3;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div class="flex justify-between mt-4 text-[10px] text-[#7d8489] font-bold uppercase tracking-widest">
+<span>1 Ago</span>
+<span>15 Ago</span>
+<span>30 Ago</span>
+</div>
+</div>
+</section>
+<!-- Pedidos Pendientes -->
+<section class="mb-10">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-bold text-[#ededea]">Pedidos pendientes</h3>
+<button class="text-xs font-black text-primary uppercase tracking-widest">Ver todo</button>
+</div>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container p-4 rounded-xl flex items-center justify-between shadow-[0_8px_16px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7d8489] text-xl" data-icon="person">person</span>
+</div>
+<div>
+<p class="text-xs font-black text-primary tracking-widest">#K-2026-0050</p>
+<p class="text-sm font-bold text-[#ededea]">Andrés García</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-[#ededea] mb-1">$120.00</p>
+<span class="text-[10px] font-black px-2 py-0.5 bg-amber-500/10 text-amber-500 rounded uppercase tracking-tighter">Pendiente</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container p-4 rounded-xl flex items-center justify-between shadow-[0_8px_16px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7d8489] text-xl" data-icon="person">person</span>
+</div>
+<div>
+<p class="text-xs font-black text-primary tracking-widest">#K-2026-0049</p>
+<p class="text-sm font-bold text-[#ededea]">María Lopez</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-[#ededea] mb-1">$45.00</p>
+<span class="text-[10px] font-black px-2 py-0.5 bg-emerald-500/10 text-emerald-500 rounded uppercase tracking-tighter">Confirmado</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container p-4 rounded-xl flex items-center justify-between shadow-[0_8px_16px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-[#7d8489] text-xl" data-icon="person">person</span>
+</div>
+<div>
+<p class="text-xs font-black text-primary tracking-widest">#K-2026-0048</p>
+<p class="text-sm font-bold text-[#ededea]">Ricardo Kumar</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-[#ededea] mb-1">$314.00</p>
+<span class="text-[10px] font-black px-2 py-0.5 bg-amber-500/10 text-amber-500 rounded uppercase tracking-tighter">Pendiente</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stock Crítico -->
+<section class="mb-10">
+<div class="bg-error-container/20 border border-error/10 p-6 rounded-2xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+<h3 class="text-lg font-bold text-error">Stock crítico</h3>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-center justify-between bg-surface/40 p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Chaqueta Celestial" class="w-full h-full object-cover" data-alt="high-end celestial blue designer jacket displayed on a clean background with cinematic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4tBpZ6veDqizfU7N6KM6fyox3C4M1qknHBC51auk9bYcLFjNn2CmH81o4tq9TXsrMivnA-t42UBLNMBcaBLBnAv94WVekQztis01jAJv16f5LmSmTBLsShzhcYqbZMyE0lOZdq4rfU75qwps7xuyarDIgV9okr2KBmn4xGQIpx_ioVpgkKS1WlMAE50L4n7caMgCDyAVwbLD0ivtiP59GDv-o2Dt2cHWrFAX-bmUDb6s4s-E3ymKiZWOJU8YG9sYzQ8onSEynxdB2"/>
+</div>
+<div>
+<p class="text-sm font-bold text-[#ededea]">Chaqueta Celestial</p>
+<p class="text-xs text-error font-semibold">Solo 1 unidad restante</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-3 py-1.5 rounded-lg text-xs font-black">RESTOCK</button>
+</div>
+<div class="flex items-center justify-between bg-surface/40 p-4 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container">
+<img alt="Nova Runners" class="w-full h-full object-cover" data-alt="sleek modern red and black running shoes on a dark reflective surface with dramatic highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaYlSEMtIF1lU4TE3h-aWFFhVKLaWAiriIenoRqFNLwwp7A9XxrLyePIeMqbVaUGQ59ssWxJcrEoGv-Jgh-IxycRa4Z3Auem6UCafE-Sg3OJI0DY2-Isue-LIgxYghNsicq4cjYTv1YnobJ4se_-s0LUsUj6A21-veIo9CZUyyuqkUPvGAS-Nb1STPZCgp4OXOGMvBrA6KlcZoSfaqldP1QP_y3hKDmFCFXNOaHE-bpBjnX6ZjltVYMcDMHRI-aaPIQ7ESUSeDPZni"/>
+</div>
+<div>
+<p class="text-sm font-bold text-[#ededea]">Nova Runners</p>
+<p class="text-xs text-error font-semibold">Solo 2 unidades restante</p>
+</div>
+</div>
+<button class="bg-primary-container text-on-primary-container px-3 py-1.5 rounded-lg text-xs font-black">RESTOCK</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#071327]/90 backdrop-blur-xl z-50 rounded-t-2xl shadow-[0_-10px_40px_rgba(116,184,211,0.04)]">
+<a class="flex flex-col items-center justify-center bg-[#74b8d3] text-[#071327] rounded-2xl px-4 py-1.5 transition-all scale-98 active:translate-y-0.5 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-manrope text-[10px] uppercase font-semibold tracking-wider mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] px-4 py-1.5 hover:text-[#ededea] transition-colors scale-98 active:translate-y-0.5 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-manrope text-[10px] uppercase font-semibold tracking-wider mt-1">Pedidos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] px-4 py-1.5 hover:text-[#ededea] transition-colors scale-98 active:translate-y-0.5 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-manrope text-[10px] uppercase font-semibold tracking-wider mt-1">Inventario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] px-4 py-1.5 hover:text-[#ededea] transition-colors scale-98 active:translate-y-0.5 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-manrope text-[10px] uppercase font-semibold tracking-wider mt-1">Usuarios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#7d8489] px-4 py-1.5 hover:text-[#ededea] transition-colors scale-98 active:translate-y-0.5 duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-manrope text-[10px] uppercase font-semibold tracking-wider mt-1">Ajustes</span>
+</a>
+</nav>
+</body></html>

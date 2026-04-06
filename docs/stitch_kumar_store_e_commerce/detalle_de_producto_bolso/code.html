@@ -1,0 +1,247 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>KUMAR Store - Detalle de Producto</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#3c4348",
+                        "on-tertiary": "#2a3136",
+                        "secondary-fixed-dim": "#b8c5f6",
+                        "outline-variant": "#3f484c",
+                        "inverse-surface": "#d7e2ff",
+                        "surface-container-lowest": "#030e22",
+                        "on-secondary-fixed": "#0a1941",
+                        "outline": "#899297",
+                        "tertiary-container": "#a9b0b5",
+                        "on-tertiary-fixed-variant": "#41484c",
+                        "surface-container": "#142034",
+                        "secondary-container": "#38456f",
+                        "on-secondary": "#212e57",
+                        "inverse-primary": "#15667f",
+                        "surface-container-high": "#1f2a3f",
+                        "on-secondary-container": "#a7b3e4",
+                        "surface-tint": "#8cd0ec",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#004d62",
+                        "primary-fixed-dim": "#8cd0ec",
+                        "secondary": "#b8c5f6",
+                        "on-surface-variant": "#bfc8cd",
+                        "primary": "#90d4ef",
+                        "on-tertiary-fixed": "#161c20",
+                        "on-primary": "#003544",
+                        "on-error": "#690005",
+                        "on-surface": "#d7e2ff",
+                        "on-primary-fixed": "#001f29",
+                        "surface-variant": "#2a354a",
+                        "surface-dim": "#071327",
+                        "surface-container-highest": "#2a354a",
+                        "on-secondary-fixed-variant": "#38456f",
+                        "on-background": "#d7e2ff",
+                        "error": "#ffb4ab",
+                        "surface": "#071327",
+                        "surface-bright": "#2e394f",
+                        "primary-fixed": "#b9eaff",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#dde3e9",
+                        "inverse-on-surface": "#253046",
+                        "primary-container": "#74b8d3",
+                        "background": "#071327",
+                        "surface-container-low": "#101b30",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-primary-container": "#00485c",
+                        "tertiary-fixed-dim": "#c1c7cd",
+                        "tertiary": "#c5cbd1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top AppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md shadow-[0_32px_64px_rgba(0,0,0,0.15)] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="text-[#74b8d3] scale-98 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined" data-icon="arrow_back" style="">arrow_back</span>
+</button>
+<h1 class="text-xl font-extrabold text-[#ededea] font-manrope tracking-tight uppercase" style=""><span style="color: rgb(116, 184, 211); font-family: Manrope; text-transform: none;">KUMAR Store</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#74b8d3] scale-98 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined" data-icon="favorite" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+<button class="text-[#74b8d3] scale-98 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined" data-icon="share" style="">share</span>
+</button>
+</div>
+</nav>
+<main class="pt-16 pb-32">
+<!-- Hero Gallery Section -->
+<section class="relative w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Luxurious minimalist black synthetic leather handbag with gold accents on a dark editorial studio background with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR_nzj1siF3d-y4n0_V6b1UUTECDA2DbQXtY6mQF2FQuzAhGfzThr2lnujeyalYjuvi2c41FOOK5uipQU_NcYP6lXCIRVKhUlEhB8BHnv0Tu152jLQk_n0kOpOjrFDF3B8B4wXiOjWbJ2aRX7iN4096OUcZrXuZudq03nMJIbFVnpGPOvHt5eCqY2ddrwqjC0lZ4bd2NngMEUC7dH9Iz68FBY4e4X0VV2ljsHWiYTxfDu4eXv_2tP9kK0mjIkj8fFc0MThecrcCfqT" style="">
+<!-- Discount Badge -->
+<div class="absolute top-6 left-6 bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-bold text-sm tracking-wider" style="">
+                -25%
+            </div>
+<!-- Indicator Dots -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface/20"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface/20"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface/20"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface/20"></div>
+</div>
+</section>
+<!-- Product Content -->
+<section class="px-6 mt-8 space-y-6">
+<!-- Title & Pricing -->
+<div class="space-y-2">
+<div class="flex justify-between items-start">
+<h2 class="text-2xl font-extrabold text-on-surface tracking-tight leading-tight max-w-[70%]" style="">Bolso de cuero sintético</h2>
+<div class="flex flex-col items-end">
+<span class="text-2xl font-bold text-primary" style="">$39.99</span>
+<span class="text-sm text-secondary-text line-through opacity-60" style="">$53.00</span>
+</div>
+</div>
+<!-- Ratings -->
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star_half" style="">star_half</span>
+</div>
+<span class="text-xs font-medium text-secondary-text" style="">4.2 (24 reseñas)</span>
+</div>
+</div>
+<!-- Inventory Alert -->
+<div class="flex items-center gap-3 bg-error-container/20 border border-error/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-error" data-icon="warning" style="">warning</span>
+<span class="text-sm font-semibold text-error" style="">Quedan 3 disponibles</span>
+</div>
+<!-- Color Selectors -->
+<div class="space-y-3">
+<span class="text-xs uppercase tracking-widest font-bold text-secondary-text" style="">Seleccionar Color</span>
+<div class="flex gap-4">
+<!-- Black -->
+<button class="w-10 h-10 rounded-full bg-[#000000] ring-2 ring-primary ring-offset-4 ring-offset-surface transition-all" style=""></button>
+<!-- Navy -->
+<button class="w-10 h-10 rounded-full bg-[#132149] ring-2 ring-transparent ring-offset-4 ring-offset-surface hover:ring-outline-variant transition-all" style=""></button>
+<!-- Beige -->
+<button class="w-10 h-10 rounded-full bg-[#d2b48c] ring-2 ring-transparent ring-offset-4 ring-offset-surface hover:ring-outline-variant transition-all" style=""></button>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-3">
+<span class="text-xs uppercase tracking-widest font-bold text-secondary-text" style="">Descripción</span>
+<p class="text-on-surface-variant leading-relaxed text-sm" style="">
+                    Este bolso de cuero sintético premium combina la elegancia clásica con la funcionalidad moderna. Su diseño estructurado ofrece un compartimento principal espacioso y acabados metálicos de alta calidad...
+                </p>
+<button class="text-primary font-bold text-sm flex items-center gap-1" style="">
+                    Ver más <span class="material-symbols-outlined text-sm" data-icon="expand_more" style="">expand_more</span>
+</button>
+</div>
+<!-- Related Products -->
+<div class="space-y-4 pt-4">
+<div class="flex justify-between items-center">
+<span class="text-xs uppercase tracking-widest font-bold text-secondary-text" style="">Productos Relacionados</span>
+<button class="text-primary text-xs font-bold uppercase tracking-tighter" style="">Ver Todos</button>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-4 -mx-6 px-6">
+<!-- Related Card 1 -->
+<div class="min-w-[160px] space-y-3 group">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close up of a luxury designer wallet with textured surface in deep navy blue" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyTmpz92-sGoSowwIQFW9-LTK3onZeeIzqbgul4534BoCjmmKxvq3WSZQXPzxBU3uFhkaTVKYqdYC4uzhGl7tc6xHSNZh027ssLc9OyK9kvzkhnaU6RJymCHYrH0dH2UYtSeBeCbdnZXGEmY7lGCaS7GFmxfeEv9bqIEnQS9IABbz83IchNyMKgxmZRCfS1t6l3p7DsN0CYOkO73n8hxR5KzdsAWEFFcVCik0HpPLfb_VAG2h6XxX9tFUXjHP_pswxWeOpwj-TY6a5" style="">
+</div>
+<div class="space-y-1">
+<h4 class="text-xs font-bold truncate" style="">Cartera Nocturna</h4>
+<span class="text-sm font-bold text-primary" style="">$24.99</span>
+</div>
+</div>
+<!-- Related Card 2 -->
+<div class="min-w-[160px] space-y-3 group">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant leather accessories and clutch bag on a minimalist dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_iKu4v1iiauSrQAjoYFan_Y_uxr8sEb_C79_OkFxAOW0YEBBA_Ae_-faL_WVF1rA1WTKOASjarU8F8oc-aI3x5RhD2Fxs3aJF1TROGLQz5IE11ukfll5BYrUq6t2CZdwxOSYAHxlvkbA4fG9l1-WVpafxaIWJLg5qnmQrZD-b-UVY2rjk4ZbKBu0OcgYxAwc7gPdRNfKraP88qnvm1qL_FLz6_7C54UjrKk9hCa3Ybg94AUrWiKK9Mr5MHd5KaIVf5GmYc2uEbxWQ" style="">
+</div>
+<div class="space-y-1">
+<h4 class="text-xs font-bold truncate" style="">Clutch Celestial</h4>
+<span class="text-sm font-bold text-primary" style="">$45.00</span>
+</div>
+</div>
+<!-- Related Card 3 -->
+<div class="min-w-[160px] space-y-3 group">
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek fashion backpack made of matte black material for a professional look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvDoKpyqVhho26m-EetGtkxNCzL-0pZDRX8jM-xNTPHAYIVUs1VL66G_5Vi1St21pQaQ7OuOyLvQEizHqLq2zutKBEZJlmQubAaiOm8EMDr3awxg5xuQ-MWEDwUXh69_INP0gBZyMrNcxxCO_wK4UenGElNFFXCFM0yehNpFlpL_NockPbucl1q8X0m9QId7yIp3WOTUylQnPdcPPgVM2Uvc3l6gALGU8KBYAESXu5D3WFi_Py2p9WZxaAsgzJy9sWUKw4GPlAECcg" style="">
+</div>
+<div class="space-y-1">
+<h4 class="text-xs font-bold truncate" style="">Mochila Urbana</h4>
+<span class="text-sm font-bold text-primary" style="">$59.99</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom CTA -->
+<div class="fixed bottom-0 w-full z-50 bg-[#071327]/90 backdrop-blur-xl border-t border-outline-variant/10 px-6 py-5 flex items-center justify-center">
+<button class="w-full bg-primary-container text-on-primary-container h-14 rounded-xl font-extrabold text-sm tracking-widest uppercase flex items-center justify-center gap-3 shadow-lg hover:opacity-90 active:scale-95 transition-all" style="">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="">shopping_bag</span>
+            AGREGAR AL CARRITO — $39.99
+        </button>
+</div>
+<!-- Bottom Nav Bar (Supressed for Detail Page - Replaced by Footer CTA per UI best practices) -->
+<!-- However, providing the skeletal structure as requested by "Shared Components" even if supressed, 
+         using the active mapping if it were visible. -->
+<footer class="hidden md:flex fixed bottom-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md h-20 px-4 justify-around items-center rounded-t-[24px] shadow-[0_-8px_32px_rgba(0,0,0,0.3)]">
+<div class="flex flex-col items-center justify-center text-[#74b8d3] font-bold">
+<span class="material-symbols-outlined" data-icon="storefront" style="">storefront</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest" style="">Boutique</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489]">
+<span class="material-symbols-outlined" data-icon="search" style="">search</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest" style="">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489]">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="">shopping_bag</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest" style="">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489]">
+<span class="material-symbols-outlined" data-icon="receipt_long" style="">receipt_long</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest" style="">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489]">
+<span class="material-symbols-outlined" data-icon="person" style="">person</span>
+<span class="font-manrope text-[10px] uppercase tracking-widest" style="">Profile</span>
+</div>
+</footer>
+</body></html>

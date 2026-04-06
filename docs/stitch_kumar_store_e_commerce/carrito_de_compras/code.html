@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#1f2a3f",
+                        "tertiary": "#c5cbd1",
+                        "surface-bright": "#2e394f",
+                        "surface-variant": "#2a354a",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#41484c",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#bfc8cd",
+                        "on-secondary-container": "#a7b3e4",
+                        "secondary-container": "#38456f",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-tertiary-fixed": "#161c20",
+                        "surface-tint": "#8cd0ec",
+                        "background": "#071327",
+                        "on-secondary-fixed": "#0a1941",
+                        "inverse-surface": "#d7e2ff",
+                        "outline": "#899297",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#d7e2ff",
+                        "on-primary-fixed-variant": "#004d62",
+                        "surface": "#071327",
+                        "tertiary-fixed-dim": "#c1c7cd",
+                        "inverse-primary": "#15667f",
+                        "on-secondary-fixed-variant": "#38456f",
+                        "primary-container": "#74b8d3",
+                        "on-primary": "#003544",
+                        "tertiary-container": "#a9b0b5",
+                        "on-error": "#690005",
+                        "primary": "#90d4ef",
+                        "on-tertiary": "#2a3136",
+                        "on-tertiary-container": "#3c4348",
+                        "on-primary-fixed": "#001f29",
+                        "on-secondary": "#212e57",
+                        "surface-container-highest": "#2a354a",
+                        "surface-dim": "#071327",
+                        "secondary-fixed-dim": "#b8c5f6",
+                        "surface-container-lowest": "#030e22",
+                        "primary-fixed": "#b9eaff",
+                        "outline-variant": "#3f484c",
+                        "tertiary-fixed": "#dde3e9",
+                        "on-primary-container": "#00485c",
+                        "surface-container-low": "#101b30",
+                        "secondary": "#b8c5f6",
+                        "primary-fixed-dim": "#8cd0ec",
+                        "on-background": "#d7e2ff",
+                        "inverse-on-surface": "#253046",
+                        "surface-container": "#142034"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-40">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#071327]/80 backdrop-blur-md shadow-xl shadow-black/20 flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 transition-transform scale-95" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-[#74b8d3] font-['Manrope'] tracking-tight">KUMAR Store</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#74b8d3] hover:opacity-80 transition-transform scale-95" data-icon="notifications">notifications</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Title & Info Badge -->
+<div class="flex flex-col gap-4 mb-8">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Carrito (3)</h2>
+<div class="inline-flex items-center gap-2 bg-primary-container/10 border border-primary-container/20 px-4 py-2 rounded-xl w-fit">
+<span class="material-symbols-outlined text-[#74b8d3] text-sm" data-icon="schedule">schedule</span>
+<span class="text-sm font-semibold text-[#74b8d3]">El carrito expira en 6 días</span>
+</div>
+</div>
+<!-- Cart Items List -->
+<div class="flex flex-col gap-6">
+<!-- Item 1 -->
+<div class="relative group">
+<!-- Swipe Indicator (Sutil) -->
+<div class="absolute inset-0 bg-error/20 rounded-2xl flex items-center justify-end pr-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-error" data-icon="delete_sweep">delete_sweep</span>
+</div>
+<div class="relative bg-surface-container p-4 rounded-2xl flex gap-4 transition-transform hover:-translate-x-2">
+<div class="w-24 h-24 bg-surface-container-low rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="luxury minimalist black hoodie displayed on a clean deep navy background with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL-ywTaWq9v5xzfGay3pIswZVwrhVOYpig6CFemo9_yU096dVfEzGapRz-FxA-taNmIwVSthujmsom-algU_i0I2nXjIVglff4QkYgkutd-NzPmdTqO1M4_dUi_UCFCc1u26GOpHE1Y7IAdJjRL6ArLX8Fwxd6GAIpeAGI-18u0Qs_H2FVjjdzkUW8zG8uGslZnUw4mKhYbF1PCwavVG6mi0KNt_a_37FY633by6it6z0cuQAqqj5Y9UTwrOf_ztJCnaY-f-6lduZV"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="text-on-surface font-bold text-lg leading-tight">Celestial Hoodie</h3>
+<p class="text-secondary-text text-sm text-[#7d8489]">Talla: L / Color: Deep Night</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-primary-container font-extrabold text-lg">$64.50</span>
+<div class="flex items-center bg-background rounded-full px-3 py-1 gap-4">
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="text-sm font-bold">1</span>
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative group">
+<div class="absolute inset-0 bg-error/20 rounded-2xl flex items-center justify-end pr-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-error" data-icon="delete_sweep">delete_sweep</span>
+</div>
+<div class="relative bg-surface-container p-4 rounded-2xl flex gap-4 transition-transform hover:-translate-x-2">
+<div class="w-24 h-24 bg-surface-container-low rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="high-end metallic red sneakers on a dark reflective surface with cinematic blue rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqS3mnKGN-PkgfGyMv8ZegheWzeKVDGG0UhIs4gsx62nc7jiYRfjQlpVf6CEpsa0Yo4pGIwgHWFcy_PEvKtHbLNEXj-yPMbCB0R_ea8YQ3VYypwOcUUcDZuyfvXXJVHGpTnCXqpRya4PCo1aGDjzSlcdCXbnGtL57sceNuHvBpLF-TQjGnSCysN5zUOo7VQvlsNOGSRAf8lsNcG74AzO09rn333xkOn9-jipThcty55_1hCWlcot5OZdMFTDvOp_1XJ6t8vl8v-6Ct"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="text-on-surface font-bold text-lg leading-tight">Nova Runners</h3>
+<p class="text-secondary-text text-sm text-[#7d8489]">Talla: 42 / Color: Nebula Red</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-primary-container font-extrabold text-lg">$89.99</span>
+<div class="flex items-center bg-background rounded-full px-3 py-1 gap-4">
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="text-sm font-bold">1</span>
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative group">
+<div class="absolute inset-0 bg-error/20 rounded-2xl flex items-center justify-end pr-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-error" data-icon="delete_sweep">delete_sweep</span>
+</div>
+<div class="relative bg-surface-container p-4 rounded-2xl flex gap-4 transition-transform hover:-translate-x-2">
+<div class="w-24 h-24 bg-surface-container-low rounded-xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="luxury designer watch with leather strap on a dark velvet surface with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6mdlgCPsdwW6ONk00E-MLzh3JsUEEM5PYlbirMSHszoZSkSPjbGJL8wxMr8-6KRpw-VzRIYFqA3U9-U2hnlv_q0evZJy40M0MM_NLgODtNPiidYqqUoIPdLcRCfwgl5aMC9w5CLRegZRVASXoTrKHR-DF7twFgmeJlI_bJG0-APUZhta9LHBFTm4PxoleH23ypl3Moi9jRWLXXv5IIChIRJlCCjbfFp9U9Htod1xGZdjKAv3HPdNvaAt22Ei-jlNxvo51D23Am4DJ"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<h3 class="text-on-surface font-bold text-lg leading-tight">Astral Watch</h3>
+<p class="text-secondary-text text-sm text-[#7d8489]">Talla: Única / Color: Silver</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-primary-container font-extrabold text-lg">$0.00</span>
+<div class="flex items-center bg-background rounded-full px-3 py-1 gap-4">
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="remove">remove</span></button>
+<span class="text-sm font-bold">1</span>
+<button class="text-[#74b8d3] hover:opacity-70"><span class="material-symbols-outlined text-sm" data-icon="add">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Section -->
+<div class="mt-12 mb-32">
+<div class="bg-surface-container-low rounded-3xl p-6 shadow-2xl">
+<h4 class="text-lg font-bold text-on-surface mb-4">Resumen</h4>
+<div class="space-y-3">
+<div class="flex justify-between">
+<span class="text-[#7d8489]">Subtotal</span>
+<span class="text-on-surface font-semibold">$154.49</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#7d8489]">Envío</span>
+<span class="text-emerald-400 font-semibold">$5.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#7d8489]">IVA (15%)</span>
+<span class="text-on-surface font-semibold">$23.17</span>
+</div>
+<div class="pt-4 mt-4 border-t border-surface-variant flex justify-between items-center">
+<span class="text-xl font-bold text-on-surface">Total</span>
+<span class="text-2xl font-black text-[#74b8d3]">$182.66</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-[#74b8d3] text-[#071327] py-4 rounded-xl font-black text-lg shadow-lg shadow-[#74b8d3]/20 active:scale-95 transition-transform">
+                    Proceder al pago ($182.66)
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-3xl bg-[#0d1e3a]/90 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.4)] flex justify-around items-center h-20 pb-safe px-4">
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors duration-200 scale-90">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors duration-200 scale-90">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Catalog</span>
+</div>
+<!-- ACTIVE: Cart -->
+<div class="relative flex flex-col items-center justify-center text-[#74b8d3] after:content-[''] after:w-1 after:h-1 after:bg-[#74b8d3] after:rounded-full after:mt-1 duration-200 scale-90">
+<div class="relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-2 -right-2 bg-error text-on-error text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</div>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors duration-200 scale-90">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#7d8489] hover:text-white transition-colors duration-200 scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>
