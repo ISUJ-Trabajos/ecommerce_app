@@ -33,10 +33,10 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] UI: Pantalla Carrito con modales y alertas de precios o stock.
 
 ### 5. P05 Checkout — 4 pasos + pedido en BD
-- [ ] Endpoints `GET /shipping/zones` y `POST /shipping/calculate`.
-- [ ] Transacción crítica `POST /orders` (checkout y lógica atómica mysql detallada en `AGENT.md`).
-- [ ] UI: Flujo de 4 pasos (Dirección -> Envío -> Pago -> Resumen).
-- [ ] UI: Pantalla de Pago Exitoso.
+- [x] Endpoints `GET /shipping/zones` y `POST /shipping/calculate`.
+- [x] Transacción crítica `POST /orders` (checkout y lógica atómica mysql detallada en `AGENT.md`).
+- [x] UI: Flujo de 4 pasos (Dirección -> Envío -> Pago -> Resumen).
+- [x] UI: Pantalla de Pago Exitoso.
 
 ### 6. P05+ Pedidos — Historial + timeline
 - [ ] Endpoints de consulta de Pedidos (`/orders`, `/orders/:id`).
