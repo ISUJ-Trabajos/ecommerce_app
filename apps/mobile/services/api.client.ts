@@ -3,9 +3,7 @@ import * as SecureStore from 'expo-secure-store';
 import NetInfo from '@react-native-community/netinfo';
 import { useAuthStore } from '../store/auth.store'; // We will define this next
 
-// export const BASE_URL = 'http://10.0.2.2:3000'; // Emulador Android
-// export const BASE_URL = 'http://192.168.52.3:3000'; // Dispositivo Físico (ejemplo con puerto)
-export const BASE_URL = 'http://localhost:3000'; // Entorno Web (tu navegador y el backend están en la misma PC)
+import { BASE_URL } from '../constants/api';
 
 export const apiClient = axios.create({
   baseURL: BASE_URL,

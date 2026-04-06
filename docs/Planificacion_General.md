@@ -12,6 +12,7 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] Setup de Base de Datos MySQL (importar `PROTO_SQL.sql`).
 - [x] Boilerplate API (Fastify + plugins + middlewares + estructura global).
 - [x] App Móvil (Expo Router + Zustand + NativeWind + navegación inicial vacía).
+- [x] Inicialización del entorno, dependencias y variables de entorno.
 
 ### 2. P01 Auth — Login, registro, sesión
 - [x] Endpoint `/auth/register` + `/auth/login` (generación de tokens JWT).
