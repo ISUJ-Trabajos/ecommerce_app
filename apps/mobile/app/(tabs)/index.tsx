@@ -1,13 +1,18 @@
 import { View, Text, ScrollView, TouchableOpacity, FlatList, Image, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 import { useFeatured, useCategories } from '../../hooks/useCatalog';
 import { useAuthStore } from '../../store/auth.store';
+import { useWishlistStore } from '../../store/wishlist.store';
 
 function ProductCard({ item, onPress }: { item: any; onPress: () => void }) {
   const hasDiscount = item.discount_percent > 0;
+  const toggleLike = useWishlistStore(state => state.toggleLike);
+  const isLiked = useWishlistStore(state => state.likedIds.has(item.id));
+
   return (
     <TouchableOpacity onPress={onPress} className="w-44 mr-4">
-      <View className="bg-surface rounded-2xl overflow-hidden">
+      <View className="bg-surface rounded-2xl overflow-hidden relative">
         <Image
           source={{ uri: item.primary_image || 'https://placehold.co/400x400/132149/74b8d3?text=Producto' }}
           className="w-full h-44"
@@ -18,6 +23,17 @@ function ProductCard({ item, onPress }: { item: any; onPress: () => void }) {
             <Text className="text-white text-xs font-bold">-{item.discount_percent}%</Text>
           </View>
         )}
+        {/* Corazón flotante */}
+        <TouchableOpacity
+          onPress={(e) => { e.stopPropagation(); toggleLike(item.id); }}
+          className="absolute top-2 right-2 w-8 h-8 rounded-full bg-background/60 items-center justify-center"
+        >
+          <Ionicons
+            name={isLiked ? 'heart' : 'heart-outline'}
+            size={18}
+            color={isLiked ? '#f87171' : '#ededea'}
+          />
+        </TouchableOpacity>
       </View>
       <View className="mt-2 px-1">
         <Text style={{ fontFamily: 'Manrope_600SemiBold' }} className="text-text text-sm" numberOfLines={1}>

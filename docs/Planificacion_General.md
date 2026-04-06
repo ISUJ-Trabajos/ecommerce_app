@@ -44,9 +44,9 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] UI: Detalle del pedido con timeline.
 
 ### 7. P04 Wishlist — Guardar/quitar productos
-- [ ] Endpoints CRUD Wishlist (`/wishlist/items`).
-- [ ] UI: Integración botón de corazón "♡" en catálogo y tarjetas.
-- [ ] UI: Pantalla lista Wishlist.
+- [x] Endpoints CRUD Wishlist (`/wishlist/items`).
+- [x] UI: Integración botón de corazón "♡" en catálogo y tarjetas.
+- [x] UI: Pantalla lista Wishlist.
 
 ### 8. P06 Perfil — Datos, direcciones, config
 - [ ] Endpoints de Perfil y Usuarios (`/users/me` y endpoints de direcciones).

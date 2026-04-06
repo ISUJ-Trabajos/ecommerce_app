@@ -3,6 +3,7 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 import { useState, useCallback, useEffect } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useProducts, useCategories } from '../../hooks/useCatalog';
+import { useWishlistStore } from '../../store/wishlist.store';
 
 export default function CatalogScreen() {
   const router = useRouter();
@@ -38,12 +39,15 @@ export default function CatalogScreen() {
 
   const renderProduct = ({ item }: { item: any }) => {
     const hasDiscount = item.discount_percent > 0;
+    const toggleLike = useWishlistStore.getState().toggleLike;
+    const isLiked = useWishlistStore(state => state.likedIds.has(item.id));
+
     return (
       <TouchableOpacity
         onPress={() => router.push(`/product/${item.slug}`)}
         className="flex-1 m-2 max-w-[48%]"
       >
-        <View className="bg-surface rounded-2xl overflow-hidden">
+        <View className="bg-surface rounded-2xl overflow-hidden relative">
           <Image
             source={{ uri: item.primary_image || 'https://placehold.co/400x400/132149/74b8d3?text=Producto' }}
             className="w-full h-44"
@@ -54,6 +58,17 @@ export default function CatalogScreen() {
               <Text className="text-white text-xs font-bold">-{item.discount_percent}%</Text>
             </View>
           )}
+          {/* Corazón flotante */}
+          <TouchableOpacity
+            onPress={(e) => { e.stopPropagation(); toggleLike(item.id); }}
+            className="absolute top-2 right-2 w-8 h-8 rounded-full bg-background/60 items-center justify-center"
+          >
+            <Ionicons
+              name={isLiked ? 'heart' : 'heart-outline'}
+              size={18}
+              color={isLiked ? '#f87171' : '#ededea'}
+            />
+          </TouchableOpacity>
         </View>
         <View className="mt-2 px-1">
           <Text style={{ fontFamily: 'Manrope_600SemiBold' }} className="text-text text-sm" numberOfLines={2}>

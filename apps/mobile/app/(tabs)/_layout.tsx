@@ -2,16 +2,19 @@ import { Tabs, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useCartStore } from '../../store/cart.store';
+import { useWishlistStore } from '../../store/wishlist.store';
 import { useEffect } from 'react';
 
 export default function TabsLayout() {
   const router = useRouter();
   const fetchCart = useCartStore(state => state.fetchCart);
   const cart = useCartStore(state => state.cart);
+  const fetchLikedIds = useWishlistStore(state => state.fetchLikedIds);
   
   useEffect(() => {
     fetchCart();
-  }, [fetchCart]);
+    fetchLikedIds();
+  }, [fetchCart, fetchLikedIds]);
 
   const itemsCount = cart?.items?.reduce((acc: number, item: any) => acc + item.quantity, 0) || 0;
 

@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useProductDetail } from '../../hooks/useCatalog';
 import { useCartStore } from '../../store/cart.store';
+import { useWishlistStore } from '../../store/wishlist.store';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const IMAGE_HEIGHT = SCREEN_WIDTH * 0.9;
@@ -97,6 +98,18 @@ export default function ProductDetail() {
             className="absolute top-14 left-5 bg-background/60 w-10 h-10 rounded-full items-center justify-center"
           >
             <Ionicons name="arrow-back" size={22} color="#ededea" />
+          </TouchableOpacity>
+
+          {/* Corazón wishlist flotante */}
+          <TouchableOpacity
+            onPress={() => useWishlistStore.getState().toggleLike(product.id)}
+            className="absolute top-14 right-5 bg-background/60 w-10 h-10 rounded-full items-center justify-center"
+          >
+            <Ionicons
+              name={useWishlistStore.getState().likedIds.has(product.id) ? 'heart' : 'heart-outline'}
+              size={22}
+              color={useWishlistStore.getState().likedIds.has(product.id) ? '#f87171' : '#ededea'}
+            />
           </TouchableOpacity>
 
           {/* Image indicators */}
