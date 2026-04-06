@@ -21,11 +21,11 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] Implementación de SecureStore para guardar el refresh token.
 
 ### 3. P02 Catálogo — Home, listado, detalle, variantes
-- [ ] Endpoints de Catálogo (`/products/featured`, `/products`, `/categories`, `/products/:slug`).
-- [ ] UI: Home Screen (best sellers, oferta, categorías).
-- [ ] UI: Listado de catálogo con búsqueda.
-- [ ] UI: Detalle de Producto y selección de variantes (con límite de stock).
-- [ ] Hooks Tanstack Query para el flujo de datos.
+- [x] Endpoints de Catálogo (`/products/featured`, `/products`, `/categories`, `/products/:slug`).
+- [x] UI: Home Screen (best sellers, oferta, categorías).
+- [x] UI: Listado de catálogo con búsqueda.
+- [x] UI: Detalle de Producto y selección de variantes (con límite de stock).
+- [x] Hooks Tanstack Query para el flujo de datos.
 
 ### 4. P03 Carrito — Persistencia, cantidades, resumen
 - [ ] Endpoints de Carrito (`/cart`, items POST/PATCH/DELETE).
