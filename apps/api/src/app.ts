@@ -19,6 +19,11 @@ export const buildApp = async (): Promise<FastifyInstance> => {
   });
 
   await app.register(authPlugin);
+  
+  app.register(async (api) => {
+    const { authRoutes } = await import('./modules/auth/auth.routes');
+    api.register(authRoutes);
+  });
 
   app.get('/health', async () => {
     return { status: 'ok', message: 'KUMAR Store API is running' };

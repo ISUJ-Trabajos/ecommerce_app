@@ -14,11 +14,11 @@ Este documento es la **fuente de verdad** del progreso del desarrollo del monore
 - [x] App Móvil (Expo Router + Zustand + NativeWind + navegación inicial vacía).
 
 ### 2. P01 Auth — Login, registro, sesión
-- [ ] Endpoint `/auth/register` + `/auth/login` (generación de tokens JWT).
-- [ ] Middleware de autenticación global en el backend.
-- [ ] Store Zustand para `auth`.
-- [ ] UI: Pantallas de Bienvenida, Login, y Registro (Pasos 1 y 2).
-- [ ] Implementación de SecureStore para guardar el refresh token.
+- [x] Endpoint `/auth/register` + `/auth/login` (generación de tokens JWT).
+- [x] Middleware de autenticación global en el backend.
+- [x] Store Zustand para `auth`.
+- [x] UI: Pantallas de Bienvenida, Login, y Registro (Pasos 1 y 2).
+- [x] Implementación de SecureStore para guardar el refresh token.
 
 ### 3. P02 Catálogo — Home, listado, detalle, variantes
 - [ ] Endpoints de Catálogo (`/products/featured`, `/products`, `/categories`, `/products/:slug`).
